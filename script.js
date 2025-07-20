@@ -26,4 +26,21 @@ window.addEventListener('DOMContentLoaded', function () {
       testimonials[testimonialIndex].classList.add('active');
     }, 7000); // change testimonial every 7 seconds
   }
+
+  // Back to top button functionality
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    // Toggle visibility on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    // Scroll smoothly to top on click
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });

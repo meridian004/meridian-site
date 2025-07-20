@@ -10,7 +10,12 @@
 <body>
   <header>
     <div class="navbar">
-      <div class="logo"><a href="index.html">meridian strategic</a></div>
+      <div class="logo">
+        <a href="index.html" aria-label="Meridian Strategic Home">
+          <img src="logo.png" alt="Meridian Strategic logo" class="logo-img">
+          <span>meridian strategic</span>
+        </a>
+      </div>
       <nav aria-label="Primary Navigation">
         <ul>
           <li><a href="about.html">About</a></li>
@@ -25,55 +30,71 @@
     </div>
   </header>
 
-  <main class="services" style="padding-top:2rem; max-width:600px;">
+  <main class="services contact-page" style="padding-top:2rem;">
     <h2>Request a Quote or Capabilities Brief</h2>
-    <p>Complete the form below to request our capability statement, submit an RFQ/RFP or schedule a consultation.  We’ll respond promptly.</p>
-    <form id="quoteForm">
-      <div>
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required aria-label="Full Name">
+    <p>Complete the form below or reach out directly. Our team will respond promptly to discuss your needs.</p>
+    <div class="contact-wrapper">
+      <!-- Contact information panel -->
+      <div class="contact-info">
+        <h3>Let’s Connect</h3>
+        <p>We’re here to answer questions, discuss project requirements and guide you through the procurement process.</p>
+        <ul>
+          <li><span class="icon">📍</span> Riverside, CA</li>
+          <li><span class="icon">📞</span> <a href="tel:+19515551234" style="color:inherit;">+1 (951) 555‑1234</a></li>
+          <li><span class="icon">✉️</span> <a href="mailto:info@meridianstrategic.io" style="color:inherit;">info@meridianstrategic.io</a></li>
+          <li><span class="icon">🌐</span> <a href="https://adorable-malasada-ef6b4e.netlify.app/" style="color:inherit;">MeridianStrategic.io</a></li>
+        </ul>
       </div>
-      <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required aria-label="Email Address">
-      </div>
-      <div>
-        <label for="designation">Organisation Type</label>
-        <select id="designation" name="designation" aria-label="Organisation Type">
-          <option value="government">Government</option>
-          <option value="private">Private</option>
-        </select>
-      </div>
-      <div>
-        <label for="file">Upload RFQ / RFP / Inquiry</label>
-        <input type="file" id="file" name="file" aria-label="Upload File">
-      </div>
-      <div>
-        <label for="scope">Project Scope (150 characters)</label>
-        <textarea id="scope" name="scope" maxlength="150" rows="3" aria-label="Project Scope"></textarea>
-      </div>
-      <fieldset style="border: none; padding: 0;">
-        <legend style="font-weight:500;">Options</legend>
+      <!-- Quote request form panel -->
+      <div class="contact-form-wrapper">
+        <form id="quoteForm">
         <div>
-          <input type="checkbox" id="opt_zoom" name="option" value="Schedule Zoom">
-          <label for="opt_zoom">Schedule Zoom</label>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required aria-label="Full Name">
         </div>
         <div>
-          <input type="checkbox" id="opt_capability" name="option" value="Request Capabilities">
-          <label for="opt_capability">Request Capabilities</label>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required aria-label="Email Address">
         </div>
         <div>
-          <input type="checkbox" id="opt_verify" name="option" value="Verify Credentials">
-          <label for="opt_verify">Verify Credentials</label>
+          <label for="designation">Organisation Type</label>
+          <select id="designation" name="designation" aria-label="Organisation Type">
+            <option value="government">Government</option>
+            <option value="private">Private</option>
+          </select>
         </div>
-      </fieldset>
-      <div>
-        <label for="message">Additional Message</label>
-        <textarea id="message" name="message" rows="4" aria-label="Additional Message"></textarea>
+        <div>
+          <label for="file">Upload RFQ / RFP / Inquiry</label>
+          <input type="file" id="file" name="file" aria-label="Upload File">
+        </div>
+        <div>
+          <label for="scope">Project Scope (150 characters)</label>
+          <textarea id="scope" name="scope" maxlength="150" rows="3" aria-label="Project Scope"></textarea>
+        </div>
+        <fieldset>
+          <legend>Options</legend>
+          <div>
+            <input type="checkbox" id="opt_zoom" name="option" value="Schedule Zoom">
+            <label for="opt_zoom">Schedule Zoom</label>
+          </div>
+          <div>
+            <input type="checkbox" id="opt_capability" name="option" value="Request Capabilities">
+            <label for="opt_capability">Request Capabilities</label>
+          </div>
+          <div>
+            <input type="checkbox" id="opt_verify" name="option" value="Verify Credentials">
+            <label for="opt_verify">Verify Credentials</label>
+          </div>
+        </fieldset>
+        <div>
+          <label for="message">Additional Message</label>
+          <textarea id="message" name="message" rows="4" aria-label="Additional Message"></textarea>
+        </div>
+        <button type="submit" class="btn-cta form-submit">Submit</button>
+        <p id="successMessage" style="display:none;">Thank you for your submission! We will be in touch shortly.</p>
+        </form>
       </div>
-      <button type="submit" class="btn-cta form-submit">Submit</button>
-    </form>
-    <p id="successMessage" style="display:none; color: var(--color-accent); font-weight:500; margin-top:1rem;">Thank you for your submission! We will be in touch shortly.</p>
+    </div>
   </main>
 
   <footer>
@@ -108,6 +129,9 @@
       © 2025 Meridian Strategic Resources, LLC. All rights reserved.
     </div>
   </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>
