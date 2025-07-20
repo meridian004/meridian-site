@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Meridian Strategic Resources</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html">meridian strategic</a></div>
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="content">
+  <h2>Request a Quote or Capabilities Brief</h2>
+  <p>Complete the form below to request our capability statement, submit an RFQ/RFP or schedule a consultation. We’ll respond promptly.</p>
+  <form id="quoteForm">
+    <div>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="designation">Designation</label>
+      <select id="designation" name="designation">
+        <option value="government">Government</option>
+        <option value="private">Private</option>
+      </select>
+    </div>
+    <div>
+      <label for="file">Upload RFQ / RFP / Inquiry</label>
+      <input type="file" id="file" name="file">
+    </div>
+    <div>
+      <label for="scope">Project Scope (150 characters)</label>
+      <textarea id="scope" name="scope" maxlength="150" rows="3"></textarea>
+    </div>
+    <fieldset style="border: none; padding: 0;">
+      <legend style="font-weight: 500;">Options</legend>
+      <div>
+        <input type="checkbox" id="opt_zoom" name="option" value="Schedule Zoom">
+        <label for="opt_zoom">Schedule Zoom</label>
+      </div>
+      <div>
+        <input type="checkbox" id="opt_capability" name="option" value="Request Capabilities">
+        <label for="opt_capability">Request Capabilities</label>
+      </div>
+      <div>
+        <input type="checkbox" id="opt_verify" name="option" value="Verify Credentials">
+        <label for="opt_verify">Verify Credentials</label>
+      </div>
+    </fieldset>
+    <div>
+      <label for="message">Additional Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn-primary form-submit">Submit</button>
+  </form>
+  <p id="successMessage" style="display:none; color: #38BDF8; font-weight: 500; margin-top: 1rem;">Thank you for your submission! We will be in touch shortly.</p>
+</div>
+
+<footer>
+  © 2025 Meridian Strategic Resources, LLC. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
