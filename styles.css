@@ -309,3 +309,97 @@ footer {
   gap: 2rem;
   margin-top: 2rem;
 }
+
+
+/* Additional enterprise enhancements */
+nav a {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Card hover enhancements */
+.card-grid .card,
+.services-grid .card,
+.case-studies .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-grid .card:hover,
+.services-grid .card:hover,
+.case-studies .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Parallax hero effect */
+.hero {
+  background-attachment: fixed;
+  background-image: radial-gradient(circle at top left, rgba(37, 99, 235, 0.3), rgba(31, 41, 55, 1));
+}
+
+/* Animated highlight words */
+.hero .highlight {
+  position: relative;
+  display: inline-block;
+  animation: highlightPulse 6s infinite;
+}
+@keyframes highlightPulse {
+  0%, 100% {
+    color: #FFD700;
+  }
+  50% {
+    color: #2563EB;
+  }
+}
+
+/* Footer styling */
+footer {
+  background-color: #111827;
+  color: #9CA3AF;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+/* Logo styling enhancements */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.logo::after {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.5rem;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  position: relative;
+}
+.logo::before {
+  content: "";
+  position: absolute;
+  right: -0.2rem;
+  width: 0.2rem;
+  height: 2px;
+  background-color: #FFD700;
+  top: 50%;
+  transform: translateY(-50%);
+}
