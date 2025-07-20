@@ -1,25 +1,17 @@
-// script.js
+// Simple form handler for the Meridian Strategic Resources contact page
+// Prevents default submission and displays a success message on the page
 
-// Update the copyright year automatically
-document.addEventListener('DOMContentLoaded', () => {
-  const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    const now = new Date();
-    yearSpan.textContent = now.getFullYear();
-  }
+window.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('quoteForm');
+  const success = document.getElementById('successMessage');
 
-  // Quote form submission handler
-  const quoteForm = document.getElementById('quoteForm');
-  if (quoteForm) {
-    quoteForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const status = document.getElementById('formStatus');
-      status.textContent = 'Submitting...';
-      // Simulate asynchronous form processing
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      // Reset the form after submission
-      quoteForm.reset();
-      status.textContent = 'Thank you! Your submission has been received.';
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      // In a production environment this would send data via AJAX to a backend
+      // For now we simply show a confirmation message and reset the form
+      success.style.display = 'block';
+      form.reset();
     });
   }
 });
