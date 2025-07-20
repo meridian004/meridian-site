@@ -41,9 +41,9 @@
           <a class="btn-cta" href="services.html">Explore Services</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="placeholder_light_gray_block.png" alt="Illustration of infrastructure and procurement collaboration">
-      </div>
+      <!-- The hero background image is now handled via CSS.  We no longer need a separate
+           placeholder image element.  This empty column preserves the two‑column layout on larger screens. -->
+      <div class="hero-image" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -51,19 +51,19 @@
   <section class="trust-bar">
     <div class="container">
       <div class="trust-item">
-        <img src="placeholder_light_gray_block.png" alt="Certified Minority-Owned">
+        <span class="trust-icon" aria-hidden="true"></span>
         <span>Minority‑Owned Certified</span>
       </div>
       <div class="trust-item">
-        <img src="placeholder_light_gray_block.png" alt="SAM Registered">
+        <span class="trust-icon" aria-hidden="true"></span>
         <span>SAM Registered</span>
       </div>
       <div class="trust-item">
-        <img src="placeholder_light_gray_block.png" alt="EIN & NAICS">
+        <span class="trust-icon" aria-hidden="true"></span>
         <span>EIN & NAICS Compliant</span>
       </div>
       <div class="trust-item">
-        <img src="placeholder_light_gray_block.png" alt="Secure & Compliant">
+        <span class="trust-icon" aria-hidden="true"></span>
         <span>Secure & Compliant</span>
       </div>
     </div>
@@ -99,7 +99,8 @@
   <!-- Testimonials / Case Studies -->
   <section class="testimonials" id="case-studies">
     <h2>Success Stories</h2>
-    <div class="testimonial-grid">
+    <!-- Wrap testimonials in a slider container.  Each card will be cycled through via JavaScript -->
+    <div class="testimonial-slider">
       <div class="testimonial-card">
         <p>“MSR provided full procurement support for our multi‑year infrastructure program, helping us achieve 10% cost savings and meeting all compliance requirements.”</p>
         <div class="author">Federal Agency – Infrastructure Program Manager</div>
@@ -173,5 +174,8 @@
       © 2025 Meridian Strategic Resources, LLC. All rights reserved.
     </div>
   </footer>
+
+  <!-- Load the site’s JavaScript for interactive features such as the testimonial slider -->
+  <script src="script.js" defer></script>
 </body>
 </html>

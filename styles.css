@@ -90,7 +90,10 @@ nav a {
   justify-content: center;
   min-height: 80vh;
   padding: 4rem 1rem;
-  background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('../placeholder_light_gray_block.png');
+  /* Use a custom abstract background for the hero section rather than a plain placeholder.
+   * The gradient overlay darkens the underlying image just enough for white text to remain legible.
+   */
+  background-image: linear-gradient(rgba(17, 24, 39, 0.6), rgba(17, 24, 39, 0.6)), url('hero-bg.png');
   background-position: center;
   background-size: cover;
 }
@@ -148,9 +151,21 @@ nav a {
   font-size: 0.9rem;
   color: var(--color-text);
 }
-.trust-item img {
+/* Replace placeholder images with CSS icons for trust indicators */
+.trust-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 36px;
   height: 36px;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.trust-icon::after {
+  content: '✔';
 }
 
 /* Services section */
@@ -206,18 +221,30 @@ nav a {
   margin-bottom: 2rem;
   font-size: 2rem;
 }
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  max-width: var(--max-width);
+/* Testimonial slider styles */
+.testimonial-slider {
+  max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  /* reserve height so the container doesn't collapse when children are absolutely positioned */
+  min-height: 200px;
 }
 .testimonial-card {
   background-color: #1f2937;
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* The active testimonial is fully visible */
+.testimonial-card.active {
+  opacity: 1;
+  position: relative;
 }
 .testimonial-card p {
   font-style: italic;
@@ -330,54 +357,4 @@ footer {
   .article-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-}
-
-/* Enterprise Enhancements: interactive nav underline, card hovers, hero highlight animation, parallax background */
-nav a {
-  position: relative;
-}
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-tertiary);
-  transition: width 0.3s ease-in-out;
-}
-nav a:hover::after,
-nav a:focus::after {
-  width: 100%;
-}
-.service-card,
-.testimonial-card,
-.article-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.service-card:hover,
-.testimonial-card:hover,
-.article-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-/* Animated highlight for hero */
-@keyframes heroPulse {
-  0%,
-  100% {
-    color: var(--color-accent);
-  }
-  50% {
-    color: var(--color-tertiary);
-  }
-}
-.hero h1 span.pulse {
-  animation: heroPulse 3s infinite;
-}
-/* Parallax hero background */
-.hero {
-  background-attachment: fixed;
-}
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
