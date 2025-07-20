@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request&nbsp;a&nbsp;Quote&nbsp;–&nbsp;Meridian Strategic</title>
+  <!--
+    Quote submission form for potential clients.
+    Collects relevant project details, allows file uploads, and offers
+    optional follow‑up actions (schedule a Zoom call, request capabilities,
+    verify credentials). Form submission is handled via JavaScript to
+    demonstrate asynchronous feedback. Real email sending and back‑end
+    routing should be configured server‑side in production.
+  -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo">Meridian&nbsp;Strategic</a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="about.html">About</a></li>
+        <li role="none"><a role="menuitem" href="quote.html" class="active">Request&nbsp;Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header" aria-labelledby="quote-heading">
+      <div class="container">
+        <h1 id="quote-heading">Request&nbsp;a&nbsp;Quote</h1>
+        <p>Complete the form below to submit your project details. We'll get back to you promptly.</p>
+      </div>
+    </section>
+    <section class="form-section container">
+      <form id="quoteForm" novalidate aria-label="Quote request form">
+        <label for="fullName">Full&nbsp;Name</label>
+        <input type="text" id="fullName" name="fullName" required aria-required="true">
+
+        <label for="email">Email&nbsp;Address</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+
+        <label for="designation">Designation</label>
+        <select id="designation" name="designation" aria-label="Designation">
+          <option value="Government">Government</option>
+          <option value="Private">Private</option>
+        </select>
+
+        <label for="rfqFile">Upload&nbsp;RFQ/RFP/Inquiry (PDF, DOCX, XLSX)</label>
+        <input type="file" id="rfqFile" name="rfqFile" accept=".pdf,.doc,.docx,.xls,.xlsx">
+
+        <label for="scope">Project&nbsp;Scope (150 character summary)</label>
+        <textarea id="scope" name="scope" maxlength="150" required aria-required="true"></textarea>
+
+        <fieldset class="options-group">
+          <legend>Additional&nbsp;Options</legend>
+          <div>
+            <input type="checkbox" id="optionZoom" name="options" value="Schedule Zoom">
+            <label for="optionZoom">Schedule&nbsp;Zoom</label>
+          </div>
+          <div>
+            <input type="checkbox" id="optionCapabilities" name="options" value="Request Capabilities">
+            <label for="optionCapabilities">Request&nbsp;Capabilities</label>
+          </div>
+          <div>
+            <input type="checkbox" id="optionVerify" name="options" value="Verify Credentials">
+            <label for="optionVerify">Verify&nbsp;Credentials</label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-primary">Submit&nbsp;Request</button>
+      </form>
+      <div id="formMessage" class="hidden" role="alert"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy;&nbsp;2025 Meridian Strategic Resources. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
