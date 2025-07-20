@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adorable-malasada-ef6b4e.netlify.app/sitemap.xml
