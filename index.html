@@ -21,10 +21,25 @@
   </nav>
 </header>
 
+<!--
+  Hero section
+  We use a nested .hero-content wrapper to constrain the text width on large
+  displays and to allow for more advanced styling (e.g. highlights on
+  individual words). Each keyword in the headline is wrapped in a
+  <span> element so we can accentuate it via CSS.  
+-->
 <section class="hero">
-  <h1>Procurement. Precision. Performance.</h1>
-  <p>Your trusted partner for federal contracting, infrastructure and ESG innovation.</p>
-  <a class="btn-primary" href="contact.html">Request Capability Brief</a>
+  <div class="hero-content">
+    <h1>
+      <span class="highlight">Procurement</span>
+      <span class="separator">·</span>
+      <span class="highlight">Precision</span>
+      <span class="separator">·</span>
+      <span class="highlight">Performance</span>
+    </h1>
+    <p>Your trusted partner for federal contracting, infrastructure and ESG innovation.</p>
+    <a class="btn-primary" href="contact.html">Request Capability Brief</a>
+  </div>
 </section>
 
 <section class="features">
