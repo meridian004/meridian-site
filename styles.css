@@ -331,3 +331,53 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
+/* Enterprise Enhancements: interactive nav underline, card hovers, hero highlight animation, parallax background */
+nav a {
+  position: relative;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-tertiary);
+  transition: width 0.3s ease-in-out;
+}
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+.service-card,
+.testimonial-card,
+.article-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover,
+.testimonial-card:hover,
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+/* Animated highlight for hero */
+@keyframes heroPulse {
+  0%,
+  100% {
+    color: var(--color-accent);
+  }
+  50% {
+    color: var(--color-tertiary);
+  }
+}
+.hero h1 span.pulse {
+  animation: heroPulse 3s infinite;
+}
+/* Parallax hero background */
+.hero {
+  background-attachment: fixed;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
