@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispatch – Meridian Strategic Resources</title>
+  <meta name="description" content="Discover MSR's modern dispatch intelligence platform for fleet optimisation, compliance and emissions monitoring.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Dropdown nav */
+    .navbar nav ul li { position: relative; }
+    .navbar nav ul li ul.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--color-secondary); padding: 0.5rem 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; list-style: none; min-width: 220px; z-index:200; }
+    .navbar nav ul li:hover > ul.dropdown-menu { display:block; }
+    .navbar nav ul li ul.dropdown-menu li { padding:0.5rem 1rem; }
+    .navbar nav ul li ul.dropdown-menu li a { color: var(--color-text); text-transform: none; font-size: 0.9rem; display:block; }
+    .navbar nav ul li ul.dropdown-menu li a:hover { color: var(--color-tertiary); }
+    /* Page hero background */
+    .page-hero {
+      background-image: linear-gradient(rgba(17,24,39,0.6), rgba(17,24,39,0.6)), url('business_meeting_1.png');
+      background-position: center;
+      background-size: cover;
+      color: var(--color-text);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 2.5rem; color: var(--color-accent); margin-bottom: 0.5rem; }
+    .page-hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .feature-card {
+      background-color: var(--color-secondary);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .feature-card h3 { margin-top: 0; color: var(--color-accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html" aria-label="Meridian Strategic Home">
+          <img src="logo.png" alt="Meridian Strategic logo" class="logo-img">
+          <span>meridian strategic</span>
+        </a>
+      </div>
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="services.html">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#smart-procurement">Smart Procurement Systems</a></li>
+              <li><a href="services.html#infrastructure-intelligence">Infrastructure Intelligence</a></li>
+              <li><a href="services.html#workforce-modeling">Workforce Modeling</a></li>
+              <li><a href="services.html#compliance-strategy">Compliance Strategy</a></li>
+              <li><a href="services.html#vendor-diversity">Vendor Diversity Enablement</a></li>
+              <li><a href="services.html#env-risk">Environmental Risk Dashboards</a></li>
+              <li><a href="services.html#policy-simulation">Policy Simulation &amp; Forecasting Tools</a></li>
+              <li><a href="services.html#regional-impact">Regional Impact Metrics</a></li>
+              <li><a href="services.html#ai-blockchain">AI &amp; Blockchain for Supply Chain Tracking</a></li>
+              <li><a href="services.html#green-bond">Green Bond &amp; Sustainable Investment Dashboards</a></li>
+            </ul>
+          </li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <a class="btn-cta" href="contact.html">Get a Quote</a>
+    </div>
+  </header>
+  <section class="page-hero">
+    <h1>Modern Dispatch Intelligence for Fleet Optimisation</h1>
+    <p>Optimise routes, ensure compliance and monitor emissions with our integrated dispatch platform.</p>
+    <div class="btn-group" style="margin-top:1.5rem;">
+      <a class="btn-cta" href="contact.html">Request Access</a>
+      <a class="btn-cta" href="contact.html">View Demo</a>
+    </div>
+  </section>
+  <main class="container" style="max-width:var(--max-width); margin:0 auto; padding:2rem 1rem;">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Route Planning &amp; Optimisation</h3>
+        <p>Dynamically calculate the most efficient routes based on traffic, distance and delivery windows.</p>
+      </div>
+      <div class="feature-card">
+        <h3>ELD &amp; HOS Compliance</h3>
+        <p>Track driver hours and electronic logging devices to meet FMCSA requirements seamlessly.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Contractor Matching Engine</h3>
+        <p>Automatically match available drivers and carriers to loads based on capacity, certifications and performance.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fleet Emission Monitoring</h3>
+        <p>Monitor real-time emissions and fuel consumption to manage carbon footprint and optimise sustainability.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li>Riverside, CA</li>
+          <li><a href="mailto:info@meridianstrategic.io">info@meridianstrategic.io</a></li>
+          <li><a href="tel:+19515551234">+1 (951) 555‑1234</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p style="margin-top:0.5rem; font-size:0.8rem;">Get updates on California policy and AI in sustainability.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Meridian Strategic Resources, LLC. All rights reserved.</div>
+  </footer>
+  <script src="script.js" defer></script>
+  <script data-api="https://plausible.io/api/event" data-domain="meridianstrategic.io" src="https://plausible.io/js/plausible.js" defer></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+</body>
+</html>
