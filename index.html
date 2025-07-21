@@ -3,14 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meridian Strategic Resources – Procurement Excellence</title>
-  <meta name="description" content="Meridian Strategic Resources is a minority‑owned consulting firm providing precision procurement, resilient infrastructure and ESG solutions for public and private sectors.">
-  <meta property="og:title" content="Meridian Strategic Resources – Procurement Excellence">
-  <meta property="og:description" content="Meridian Strategic Resources delivers precision procurement, infrastructure and ESG services across sectors.">
+  <title>Meridian Strategic Resources – Strategic Excellence for Sustainable Growth</title>
+  <meta name="description" content="Meridian Strategic Resources builds intelligent systems and data frameworks powering business resilience and environmental sustainability.">
+  <meta property="og:title" content="Meridian Strategic Resources – Strategic Excellence for Sustainable Growth">
+  <meta property="og:description" content="We build intelligent systems and data frameworks that power business resilience and environmental sustainability.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://adorable-malasada-ef6b4e.netlify.app/">
-  <meta property="og:image" content="https://adorable-malasada-ef6b4e.netlify.app/placeholder_light_gray_block.png">
+  <meta property="og:image" content="logo.png">
   <link rel="stylesheet" href="styles.css">
+  <!-- Inline overrides for hero background and dropdown navigation -->
+  <style>
+    /* Override hero background image to use new AI-generated illustration */
+    .hero {
+      background-image: linear-gradient(rgba(17, 24, 39, 0.6), rgba(17, 24, 39, 0.6)), url('hero-modern.webp');
+    }
+    /* Dropdown navigation styles */
+    .navbar nav ul li { position: relative; }
+    .navbar nav ul li ul.dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--color-secondary);
+      padding: 0.5rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      list-style: none;
+      min-width: 220px;
+      z-index: 200;
+    }
+    .navbar nav ul li:hover > ul.dropdown-menu { display: block; }
+    .navbar nav ul li ul.dropdown-menu li { padding: 0.5rem 1rem; }
+    .navbar nav ul li ul.dropdown-menu li a {
+      color: var(--color-text);
+      text-transform: none;
+      font-size: 0.9rem;
+      display: block;
+    }
+    .navbar nav ul li ul.dropdown-menu li a:hover { color: var(--color-tertiary); }
+    /* Simple subscribe form styling */
+    .subscribe-form {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .subscribe-form input[type="email"] {
+      flex: 1;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 4px;
+    }
+    .subscribe-form button {
+      background-color: var(--color-accent);
+      color: var(--color-secondary);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .subscribe-form button:hover { background-color: #059669; }
+  </style>
 </head>
 <body>
   <header>
@@ -23,12 +74,27 @@
       </div>
       <nav aria-label="Primary Navigation">
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="clients.html">Clients</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="services.html">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#smart-procurement">Smart Procurement Systems</a></li>
+              <li><a href="services.html#infrastructure-intelligence">Infrastructure Intelligence</a></li>
+              <li><a href="services.html#workforce-modeling">Workforce Modeling</a></li>
+              <li><a href="services.html#compliance-strategy">Compliance Strategy</a></li>
+              <li><a href="services.html#vendor-diversity">Vendor Diversity Enablement</a></li>
+              <li><a href="services.html#env-risk">Environmental Risk Dashboards</a></li>
+              <li><a href="services.html#policy-simulation">Policy Simulation &amp; Forecasting Tools</a></li>
+              <li><a href="services.html#regional-impact">Regional Impact Metrics</a></li>
+              <li><a href="services.html#ai-blockchain">AI &amp; Blockchain for Supply Chain Tracking</a></li>
+              <li><a href="services.html#green-bond">Green Bond &amp; Sustainable Investment Dashboards</a></li>
+            </ul>
+          </li>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
       <a class="btn-cta" href="contact.html">Get a Quote</a>
@@ -40,14 +106,13 @@
     <div class="hero-content">
       <div class="hero-text">
         <h1>Strategic Excellence for Sustainable Growth</h1>
-        <p>We build intelligent frameworks that drive business decisions aligned with environmental sustainability.</p>
+        <p>We build intelligent systems and data frameworks that power business resilience and environmental sustainability.</p>
         <div class="btn-group">
           <a class="btn-cta" href="contact.html">Request Capabilities</a>
           <a class="btn-cta" href="services.html">Explore Services</a>
         </div>
       </div>
-      <!-- The hero background image is now handled via CSS.  We no longer need a separate
-           placeholder image element.  This empty column preserves the two‑column layout on larger screens. -->
+      <!-- The hero background is handled via CSS; empty column preserves two-column layout on large screens -->
       <div class="hero-image" aria-hidden="true"></div>
     </div>
   </section>
@@ -65,11 +130,11 @@
       </div>
       <div class="trust-item">
         <span class="trust-icon" aria-hidden="true"></span>
-        <span>EIN & NAICS Compliant</span>
+        <span>EIN &amp; NAICS Compliant</span>
       </div>
       <div class="trust-item">
         <span class="trust-icon" aria-hidden="true"></span>
-        <span>Secure & Compliant</span>
+        <span>Secure &amp; Compliant</span>
       </div>
     </div>
   </section>
@@ -77,55 +142,52 @@
   <!-- Services Section -->
   <section class="services" id="services">
     <h2>Our Expertise</h2>
-    
-<div class="service-grid">
-  <div class="service-card">
-    <h3>Federal Contracting Support</h3>
-    <p>Capture opportunities with bid preparation, compliance guidance and program management tailored to federal agencies.</p>
-  </div>
-  <div class="service-card">
-    <h3>ESG‑Focused Procurement</h3>
-    <p>Embed sustainability at every step of the procurement process to meet ESG goals without sacrificing performance.</p>
-  </div>
-  <div class="service-card">
-    <h3>Digital Infrastructure</h3>
-    <p>Plan and deliver robust data centres, fibre networks and smart infrastructure for modern operations.</p>
-  </div>
-  <div class="service-card">
-    <h3>Workforce Augmentation</h3>
-    <p>Augment your team with cleared, experienced professionals for mission‑critical projects.</p>
-  </div>
-  <div class="service-card">
-    <h3>Strategic Freight &amp; Logistics</h3>
-    <p>Optimise supply chains and ensure timely delivery across complex project portfolios.</p>
-  </div>
-  <div class="service-card">
-    <h3>Environmental Risk Dashboards</h3>
-    <p>Monitor real‑time environmental risks with custom dashboards to inform strategic decisions and compliance.</p>
-  </div>
-  <div class="service-card">
-    <h3>Policy Simulation &amp; Forecasting Tools</h3>
-    <p>Model policy scenarios and forecast impacts to stay ahead in a dynamic regulatory landscape.</p>
-  </div>
-  <div class="service-card">
-    <h3>Regional Impact Metrics</h3>
-    <p>Measure California‑focused environmental indicators to assess and improve community impact.</p>
-  </div>
-</div>
-
-      </section>
+    <div class="service-grid">
+      <div class="service-card" id="smart-procurement">
+        <h3>Smart Procurement Systems</h3>
+        <p>Digitise sourcing, contracting and supplier management with AI‑powered automation.</p>
+      </div>
+      <div class="service-card" id="infrastructure-intelligence">
+        <h3>Infrastructure Intelligence</h3>
+        <p>Leverage data to optimise infrastructure assets and plan resilient networks.</p>
+      </div>
+      <div class="service-card" id="workforce-modeling">
+        <h3>Workforce Modeling</h3>
+        <p>Use predictive analytics to match talent demand with cleared professionals.</p>
+      </div>
+      <div class="service-card" id="compliance-strategy">
+        <h3>Compliance Strategy</h3>
+        <p>Navigate regulations and maintain audit‑ready procurement operations.</p>
+      </div>
+      <div class="service-card" id="vendor-diversity">
+        <h3>Vendor Diversity Enablement</h3>
+        <p>Develop inclusive supplier programmes to meet diversity goals and drive innovation.</p>
+      </div>
+      <div class="service-card" id="env-risk">
+        <h3>Environmental Risk Dashboards</h3>
+        <p>Monitor real‑time environmental risks and compliance metrics.</p>
+      </div>
+      <div class="service-card" id="policy-simulation">
+        <h3>Policy Simulation &amp; Forecasting Tools</h3>
+        <p>Model policy scenarios and forecast impacts to stay ahead in a dynamic landscape.</p>
+      </div>
+      <div class="service-card" id="regional-impact">
+        <h3>Regional Impact Metrics</h3>
+        <p>Measure California‑focused environmental indicators to improve community impact.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Testimonials / Case Studies -->
   <section class="testimonials" id="case-studies">
     <h2>Success Stories</h2>
-    <!-- Wrap testimonials in a slider container.  Each card will be cycled through via JavaScript -->
     <div class="testimonial-slider">
-      <div class="testimonial-card">
+      <div class="testimonial-card active">
         <p>“MSR provided full procurement support for our multi‑year infrastructure program, helping us achieve 10% cost savings and meeting all compliance requirements.”</p>
         <div class="author">Federal Agency – Infrastructure Program Manager</div>
       </div>
       <div class="testimonial-card">
-        <p>“Their logistics optimisation reduced our delivery times by 15% while maintaining ESG targets.  We couldn’t have delivered our projects on time without MSR.”</p>
+        <p>“Their logistics optimisation reduced our delivery times by 15% while maintaining ESG targets. We couldn’t have delivered our projects on time without MSR.”</p>
         <div class="author">State Transportation Authority – Operations Director</div>
       </div>
       <div class="testimonial-card">
@@ -138,35 +200,33 @@
   <!-- Insights Preview -->
   <section class="insights-preview" id="insights">
     <h2>Latest Insights</h2>
-    
-<div class="article-grid">
-  <div class="article-card">
-    <h3>San Bernardino Water Quality Monitoring Challenges</h3>
-    <small>Posted July 15 2025</small>
-    <p>Community-based monitoring enhances water quality data in San Bernardino County; volunteers and partnerships provide frequent sampling and foster stewardship.</p>
-    <a href="insights.html#water-quality">Read more</a>
-  </div>
-  <div class="article-card">
-    <h3>San Onofre Nuclear Decommissioning Strategy</h3>
-    <small>Posted July 10 2025</small>
-    <p>Rep. Mike Levin’s SONGS task force addresses safety challenges at the San Onofre Nuclear Generating Station, advocating for removal of spent fuel and resident inspectors.</p>
-    <a href="insights.html#song-decommissioning">Read more</a>
-  </div>
-  <div class="article-card">
-    <h3>California Coastal Infrastructure Sustainability</h3>
-    <small>Posted June 30 2025</small>
-    <p>Researchers warn that up to three‑quarters of California beaches could vanish by 2100; the California Beach Resiliency Plan develops strategies to protect coastlines and collaborate with nature.</p>
-    <a href="insights.html#coastal-resilience">Read more</a>
-  </div>
-  <div class="article-card">
-    <h3>CARB Low Carbon Fuel Standard Update</h3>
-    <small>Posted July 1 2025</small>
-    <p>The California Air Resources Board approved amendments to the Low Carbon Fuel Standard that strengthen carbon reductions effective July 1, 2025.</p>
-    <a href="insights.html#carb-update">Read more</a>
-  </div>
-</div>
-
-        </section>
+    <div class="article-grid">
+      <div class="article-card">
+        <h3>San Bernardino Water Quality Monitoring Challenges</h3>
+        <small>Posted July 15 2025</small>
+        <p>Community-based monitoring enhances water quality data in San Bernardino County; volunteers and partnerships provide frequent sampling and foster stewardship.</p>
+        <a href="insights.html#water-quality">Read more</a>
+      </div>
+      <div class="article-card">
+        <h3>Decommissioning San Onofre: What’s Next for Southern CA?</h3>
+        <small>Posted July 10 2025</small>
+        <p>Rep. Mike Levin’s SONGS task force addresses safety challenges at the San Onofre Nuclear Generating Station, advocating for removal of spent fuel and resident inspectors.</p>
+        <a href="insights.html#song-decommissioning">Read more</a>
+      </div>
+      <div class="article-card">
+        <h3>California Coastal Infrastructure Sustainability</h3>
+        <small>Posted June 30 2025</small>
+        <p>Researchers warn that up to three‑quarters of California beaches could vanish by 2100; the California Beach Resiliency Plan develops strategies to protect coastlines and collaborate with nature.</p>
+        <a href="insights.html#coastal-resilience">Read more</a>
+      </div>
+      <div class="article-card">
+        <h3>CARB Low Carbon Fuel Standard Update</h3>
+        <small>Posted July 1 2025</small>
+        <p>The California Air Resources Board approved amendments to the Low Carbon Fuel Standard that strengthen carbon reductions effective July 1, 2025.</p>
+        <a href="insights.html#carb-update">Read more</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -176,15 +236,15 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="clients.html">Clients</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>Resources</h4>
         <ul>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="sitemap.xml">Sitemap</a></li>
         </ul>
       </div>
@@ -196,16 +256,24 @@
           <li><a href="tel:+19515551234">+1 (951) 555‑1234</a></li>
         </ul>
       </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p style="margin-top:0.5rem; font-size:0.8rem;">Get updates on California policy and AI in sustainability.</p>
+      </div>
     </div>
     <div class="footer-bottom">
       © 2025 Meridian Strategic Resources, LLC. All rights reserved.
     </div>
   </footer>
 
-  <!-- Load the site’s JavaScript for interactive features such as the testimonial slider -->
+  <!-- Scripts -->
   <script src="script.js" defer></script>
-
-  <!-- Back to top button -->
+  <!-- Analytics: Plausible or GA - this example uses Plausible -->
+  <script data-api="https://plausible.io/api/event" data-domain="meridianstrategic.io" src="https://plausible.io/js/plausible.js" defer></script>
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
