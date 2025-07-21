@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Meridian Strategic Resources</title>
+  <meta name="description" content="Insights from the founders and team of Meridian Strategic Resources on culture, partnerships and market reflections.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Dropdown nav styles */
+    .navbar nav ul li { position: relative; }
+    .navbar nav ul li ul.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--color-secondary); padding: 0.5rem 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; list-style: none; min-width: 220px; z-index:200; }
+    .navbar nav ul li:hover > ul.dropdown-menu { display:block; }
+    .navbar nav ul li ul.dropdown-menu li { padding:0.5rem 1rem; }
+    .navbar nav ul li ul.dropdown-menu li a { color: var(--color-text); text-transform: none; font-size: 0.9rem; display:block; }
+    .navbar nav ul li ul.dropdown-menu li a:hover { color: var(--color-tertiary); }
+    /* Page hero */
+    .page-hero {
+      background-image: linear-gradient(rgba(17,24,39,0.6), rgba(17,24,39,0.6)), url('business_meeting_2.png');
+      background-position: center;
+      background-size: cover;
+      color: var(--color-text);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 2.5rem; color: var(--color-accent); margin-bottom: 0.5rem; }
+    .page-hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .blog-card {
+      background-color: var(--color-secondary);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .blog-card h3 { margin-top: 0; color: var(--color-accent); }
+    .blog-card small { color: #9ca3af; }
+    .blog-card p { color: #d1d5db; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html" aria-label="Meridian Strategic Home">
+          <img src="logo.png" alt="Meridian Strategic logo" class="logo-img">
+          <span>meridian strategic</span>
+        </a>
+      </div>
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="services.html">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#smart-procurement">Smart Procurement Systems</a></li>
+              <li><a href="services.html#infrastructure-intelligence">Infrastructure Intelligence</a></li>
+              <li><a href="services.html#workforce-modeling">Workforce Modeling</a></li>
+              <li><a href="services.html#compliance-strategy">Compliance Strategy</a></li>
+              <li><a href="services.html#vendor-diversity">Vendor Diversity Enablement</a></li>
+              <li><a href="services.html#env-risk">Environmental Risk Dashboards</a></li>
+              <li><a href="services.html#policy-simulation">Policy Simulation &amp; Forecasting Tools</a></li>
+              <li><a href="services.html#regional-impact">Regional Impact Metrics</a></li>
+              <li><a href="services.html#ai-blockchain">AI &amp; Blockchain for Supply Chain Tracking</a></li>
+              <li><a href="services.html#green-bond">Green Bond &amp; Sustainable Investment Dashboards</a></li>
+            </ul>
+          </li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <a class="btn-cta" href="contact.html">Get a Quote</a>
+    </div>
+  </header>
+  <section class="page-hero">
+    <h1>Blog</h1>
+    <p>Founder letters, field notes and team highlights from Meridian Strategic Resources.</p>
+  </section>
+  <main class="container" style="max-width:var(--max-width); margin:0 auto; padding:2rem 1rem;">
+    <div class="blog-grid">
+      <div class="blog-card">
+        <h3>Founder Letter: Why Procurement Matters</h3>
+        <small>Posted July 1 2025</small>
+        <p>Our founder reflects on the role of procurement in driving strategic value, sustainability and resilience for government clients and private enterprises.</p>
+      </div>
+      <div class="blog-card">
+        <h3>Field Notes: Lessons from the Ports of Los Angeles</h3>
+        <small>Posted June 15 2025</small>
+        <p>Insights from our visit to the port complex, exploring supply chain chokepoints, workforce dynamics and opportunities for technology-driven improvements.</p>
+      </div>
+      <div class="blog-card">
+        <h3>Team Spotlight: Data Science at MSR</h3>
+        <small>Posted June 5 2025</small>
+        <p>Meet our data science team and learn how they build models to forecast demand, optimise logistics and support environmental reporting.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li>Riverside, CA</li>
+          <li><a href="mailto:info@meridianstrategic.io">info@meridianstrategic.io</a></li>
+          <li><a href="tel:+19515551234">+1 (951) 555‑1234</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p style="margin-top:0.5rem; font-size:0.8rem;">Get updates on California policy and AI in sustainability.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Meridian Strategic Resources, LLC. All rights reserved.</div>
+  </footer>
+  <script src="script.js" defer></script>
+  <script data-api="https://plausible.io/api/event" data-domain="meridianstrategic.io" src="https://plausible.io/js/plausible.js" defer></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+</body>
+</html>
