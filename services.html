@@ -4,8 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services – Meridian Strategic Resources</title>
-  <meta name="description" content="Explore Meridian Strategic Resources' suite of services, including federal contracting, ESG procurement, digital infrastructure, workforce augmentation and logistics.">
+  <meta name="description" content="Explore Meridian Strategic Resources' suite of services, including smart procurement, infrastructure intelligence, workforce modeling, compliance, diversity enablement, risk dashboards and more.">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Dropdown nav same as index overrides */
+    .navbar nav ul li { position: relative; }
+    .navbar nav ul li ul.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--color-secondary); padding: 0.5rem 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; list-style: none; min-width: 220px; z-index:200; }
+    .navbar nav ul li:hover > ul.dropdown-menu { display:block; }
+    .navbar nav ul li ul.dropdown-menu li { padding:0.5rem 1rem; }
+    .navbar nav ul li ul.dropdown-menu li a { color: var(--color-text); text-transform: none; font-size: 0.9rem; display:block; }
+    .navbar nav ul li ul.dropdown-menu li a:hover { color: var(--color-tertiary); }
+    /* Page hero background */
+    .page-hero {
+      background-image: linear-gradient(rgba(17,24,39,0.6), rgba(17,24,39,0.6)), url('business_meeting_3.png');
+      background-position: center;
+      background-size: cover;
+      color: var(--color-text);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 2.5rem; color: var(--color-accent); margin-bottom: 0.5rem; }
+    .page-hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+  </style>
 </head>
 <body>
   <header>
@@ -18,50 +38,84 @@
       </div>
       <nav aria-label="Primary Navigation">
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="clients.html">Clients</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="services.html">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="#smart-procurement">Smart Procurement Systems</a></li>
+              <li><a href="#infrastructure-intelligence">Infrastructure Intelligence</a></li>
+              <li><a href="#workforce-modeling">Workforce Modeling</a></li>
+              <li><a href="#compliance-strategy">Compliance Strategy</a></li>
+              <li><a href="#vendor-diversity">Vendor Diversity Enablement</a></li>
+              <li><a href="#env-risk">Environmental Risk Dashboards</a></li>
+              <li><a href="#policy-simulation">Policy Simulation &amp; Forecasting Tools</a></li>
+              <li><a href="#regional-impact">Regional Impact Metrics</a></li>
+              <li><a href="#ai-blockchain">AI &amp; Blockchain for Supply Chain Tracking</a></li>
+              <li><a href="#green-bond">Green Bond &amp; Sustainable Investment Dashboards</a></li>
+            </ul>
+          </li>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
       <a class="btn-cta" href="contact.html">Get a Quote</a>
     </div>
   </header>
-
-  <!-- Page hero for Services page -->
-  <section class="page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('business_meeting_2.png');">
+  <section class="page-hero">
     <h1>Our Services</h1>
     <p>Explore how we help clients achieve procurement excellence, sustainability and innovation.</p>
   </section>
-
   <main class="services" style="padding-top:2rem;">
     <h2>Service Offerings</h2>
     <div class="service-grid">
-      <div class="service-card">
-        <h3>Federal Contracting Support</h3>
-        <p>Our experts manage the entire contracting lifecycle, from identifying opportunities and drafting proposals to ensuring compliance and managing awards. We navigate FAR, DFARS and agency‑specific requirements so you can focus on delivery.</p>
+      <div class="service-card" id="smart-procurement">
+        <h3>Smart Procurement Systems</h3>
+        <p>Digitise sourcing, contracting and supplier management with AI-powered automation and predictive analytics.</p>
       </div>
-      <div class="service-card">
-        <h3>ESG‑Focused Procurement</h3>
-        <p>We integrate environmental, social and governance criteria into your procurement strategy. From sustainable sourcing to supplier diversity programmes, we help you achieve compliance and drive impact.</p>
+      <div class="service-card" id="infrastructure-intelligence">
+        <h3>Infrastructure Intelligence</h3>
+        <p>Design and implement data-driven infrastructure solutions, from fibre networks to smart grids.</p>
       </div>
-      <div class="service-card">
-        <h3>Digital Infrastructure</h3>
-        <p>Our team plans and implements data centres, fibre networks and smart infrastructure projects. We design resilient architectures and oversee construction, commissioning and operations.</p>
+      <div class="service-card" id="workforce-modeling">
+        <h3>Workforce Modeling</h3>
+        <p>Forecast talent needs, optimise team structures and access cleared experts through our augmentation pool.</p>
       </div>
-      <div class="service-card">
-        <h3>Workforce Augmentation</h3>
-        <p>Access a pool of cleared professionals and subject‑matter experts ready to augment your team for long‑ or short‑term assignments. We handle onboarding and clearance management.</p>
+      <div class="service-card" id="compliance-strategy">
+        <h3>Compliance Strategy</h3>
+        <p>Stay ahead of FAR, DFARS and ESG regulations with tailored compliance roadmaps and audit readiness.</p>
       </div>
-      <div class="service-card">
-        <h3>Strategic Freight & Logistics</h3>
-        <p>Optimise your supply chain with our logistics specialists. We manage transportation, warehousing and distribution to reduce costs and improve reliability.</p>
+      <div class="service-card" id="vendor-diversity">
+        <h3>Vendor Diversity Enablement</h3>
+        <p>Build inclusive supplier ecosystems that meet diversity requirements and drive competitive advantage.</p>
+      </div>
+      <div class="service-card" id="env-risk">
+        <h3>Environmental Risk Dashboards</h3>
+        <p>Visualise real-time environmental risks and sustainability metrics to support proactive decision-making.</p>
+      </div>
+      <div class="service-card" id="policy-simulation">
+        <h3>Policy Simulation &amp; Forecasting Tools</h3>
+        <p>Model legislative scenarios and predict outcomes to inform your strategic planning.</p>
+      </div>
+      <div class="service-card" id="regional-impact">
+        <h3>Regional Impact Metrics</h3>
+        <p>Track California-focused environmental indicators and measure community impact across your portfolio.</p>
+      </div>
+    </div>
+    <h2 style="margin-top:3rem;">Under Development</h2>
+    <div class="service-grid">
+      <div class="service-card" id="ai-blockchain">
+        <h3>AI &amp; Blockchain for Supply Chain Tracking</h3>
+        <p>Integrate blockchain and AI to ensure transparent, secure and efficient supply chains.</p>
+      </div>
+      <div class="service-card" id="green-bond">
+        <h3>Green Bond &amp; Sustainable Investment Dashboards</h3>
+        <p>Develop dashboards that monitor and manage sustainable finance instruments and ESG investments.</p>
       </div>
     </div>
   </main>
-
   <footer>
     <div class="footer-container">
       <div class="footer-section">
@@ -69,15 +123,15 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="clients.html">Clients</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>Resources</h4>
         <ul>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="sitemap.xml">Sitemap</a></li>
         </ul>
       </div>
@@ -89,13 +143,19 @@
           <li><a href="tel:+19515551234">+1 (951) 555‑1234</a></li>
         </ul>
       </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p style="margin-top:0.5rem; font-size:0.8rem;">Get updates on California policy and AI in sustainability.</p>
+      </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Meridian Strategic Resources, LLC. All rights reserved.
-    </div>
+    <div class="footer-bottom">© 2025 Meridian Strategic Resources, LLC. All rights reserved.</div>
   </footer>
-
-  <!-- Back to top button -->
+  <script src="script.js" defer></script>
+  <script data-api="https://plausible.io/api/event" data-domain="meridianstrategic.io" src="https://plausible.io/js/plausible.js" defer></script>
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
