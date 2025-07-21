@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services – Meridian Strategic Resources</title>
-  <meta name="description" content="Explore Meridian Strategic Resources' suite of services, including smart procurement, infrastructure intelligence, workforce modeling, compliance, diversity enablement, risk dashboards and more.">
+  <title>Dispatch – Meridian Strategic Resources</title>
+  <meta name="description" content="Discover MSR's modern dispatch intelligence platform for fleet optimisation, compliance and emissions monitoring.">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Dropdown nav same as index overrides */
+    /* Dropdown nav */
     .navbar nav ul li { position: relative; }
     .navbar nav ul li ul.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--color-secondary); padding: 0.5rem 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; list-style: none; min-width: 220px; z-index:200; }
     .navbar nav ul li:hover > ul.dropdown-menu { display:block; }
@@ -16,7 +16,7 @@
     .navbar nav ul li ul.dropdown-menu li a:hover { color: var(--color-tertiary); }
     /* Page hero background */
     .page-hero {
-      background-image: linear-gradient(rgba(17,24,39,0.6), rgba(17,24,39,0.6)), url('business_meeting_3.png');
+      background-image: linear-gradient(rgba(17,24,39,0.6), rgba(17,24,39,0.6)), url('business_meeting_1.png');
       background-position: center;
       background-size: cover;
       color: var(--color-text);
@@ -25,6 +25,19 @@
     }
     .page-hero h1 { font-size: 2.5rem; color: var(--color-accent); margin-bottom: 0.5rem; }
     .page-hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .feature-card {
+      background-color: var(--color-secondary);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .feature-card h3 { margin-top: 0; color: var(--color-accent); }
   </style>
 </head>
 <body>
@@ -42,16 +55,16 @@
           <li>
             <a href="services.html">Services</a>
             <ul class="dropdown-menu">
-              <li><a href="#smart-procurement">Smart Procurement Systems</a></li>
-              <li><a href="#infrastructure-intelligence">Infrastructure Intelligence</a></li>
-              <li><a href="#workforce-modeling">Workforce Modeling</a></li>
-              <li><a href="#compliance-strategy">Compliance Strategy</a></li>
-              <li><a href="#vendor-diversity">Vendor Diversity Enablement</a></li>
-              <li><a href="#env-risk">Environmental Risk Dashboards</a></li>
-              <li><a href="#policy-simulation">Policy Simulation &amp; Forecasting Tools</a></li>
-              <li><a href="#regional-impact">Regional Impact Metrics</a></li>
-              <li><a href="#ai-blockchain">AI &amp; Blockchain for Supply Chain Tracking</a></li>
-              <li><a href="#green-bond">Green Bond &amp; Sustainable Investment Dashboards</a></li>
+              <li><a href="services.html#smart-procurement">Smart Procurement Systems</a></li>
+              <li><a href="services.html#infrastructure-intelligence">Infrastructure Intelligence</a></li>
+              <li><a href="services.html#workforce-modeling">Workforce Modeling</a></li>
+              <li><a href="services.html#compliance-strategy">Compliance Strategy</a></li>
+              <li><a href="services.html#vendor-diversity">Vendor Diversity Enablement</a></li>
+              <li><a href="services.html#env-risk">Environmental Risk Dashboards</a></li>
+              <li><a href="services.html#policy-simulation">Policy Simulation &amp; Forecasting Tools</a></li>
+              <li><a href="services.html#regional-impact">Regional Impact Metrics</a></li>
+              <li><a href="services.html#ai-blockchain">AI &amp; Blockchain for Supply Chain Tracking</a></li>
+              <li><a href="services.html#green-bond">Green Bond &amp; Sustainable Investment Dashboards</a></li>
             </ul>
           </li>
           <li><a href="insights.html">Insights</a></li>
@@ -65,54 +78,31 @@
     </div>
   </header>
   <section class="page-hero">
-    <h1>Our Services</h1>
-    <p>Explore how we help clients achieve procurement excellence, sustainability and innovation.</p>
-  </section>
-  <main class="services" style="padding-top:2rem;">
-    <h2>Service Offerings</h2>
-    <div class="service-grid">
-      <div class="service-card" id="smart-procurement">
-        <h3>Smart Procurement Systems</h3>
-        <p>Digitise sourcing, contracting and supplier management with AI-powered automation and predictive analytics.</p>
-      </div>
-      <div class="service-card" id="infrastructure-intelligence">
-        <h3>Infrastructure Intelligence</h3>
-        <p>Design and implement data-driven infrastructure solutions, from fibre networks to smart grids.</p>
-      </div>
-      <div class="service-card" id="workforce-modeling">
-        <h3>Workforce Modeling</h3>
-        <p>Forecast talent needs, optimise team structures and access cleared experts through our augmentation pool.</p>
-      </div>
-      <div class="service-card" id="compliance-strategy">
-        <h3>Compliance Strategy</h3>
-        <p>Stay ahead of FAR, DFARS and ESG regulations with tailored compliance roadmaps and audit readiness.</p>
-      </div>
-      <div class="service-card" id="vendor-diversity">
-        <h3>Vendor Diversity Enablement</h3>
-        <p>Build inclusive supplier ecosystems that meet diversity requirements and drive competitive advantage.</p>
-      </div>
-      <div class="service-card" id="env-risk">
-        <h3>Environmental Risk Dashboards</h3>
-        <p>Visualise real-time environmental risks and sustainability metrics to support proactive decision-making.</p>
-      </div>
-      <div class="service-card" id="policy-simulation">
-        <h3>Policy Simulation &amp; Forecasting Tools</h3>
-        <p>Model legislative scenarios and predict outcomes to inform your strategic planning.</p>
-      </div>
-      <div class="service-card" id="regional-impact">
-        <h3>Regional Impact Metrics</h3>
-        <p>Track California-focused environmental indicators and measure community impact across your portfolio.</p>
-      </div>
+    <h1>Modern Dispatch Intelligence for Fleet Optimisation</h1>
+    <p>Optimise routes, ensure compliance and monitor emissions with our integrated dispatch platform.</p>
+    <div class="btn-group" style="margin-top:1.5rem;">
+      <a class="btn-cta" href="contact.html">Request Access</a>
+      <a class="btn-cta" href="contact.html">View Demo</a>
     </div>
-    <h2 style="margin-top:3rem;">Under Development</h2>
-    <div class="service-grid">
-      <div class="service-card" id="ai-blockchain">
-        <h3>AI &amp; Blockchain for Supply Chain Tracking</h3>
-        <p>Integrate blockchain and AI to ensure transparent, secure and efficient supply chains.</p>
+  </section>
+  <main class="container" style="max-width:var(--max-width); margin:0 auto; padding:2rem 1rem;">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Route Planning &amp; Optimisation</h3>
+        <p>Dynamically calculate the most efficient routes based on traffic, distance and delivery windows.</p>
       </div>
-      <div class="service-card" id="green-bond">
-        <h3>Green Bond &amp; Sustainable Investment Dashboards</h3>
-        <p>Develop dashboards that monitor and manage sustainable finance instruments and ESG investments.</p>
+      <div class="feature-card">
+        <h3>ELD &amp; HOS Compliance</h3>
+        <p>Track driver hours and electronic logging devices to meet FMCSA requirements seamlessly.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Contractor Matching Engine</h3>
+        <p>Automatically match available drivers and carriers to loads based on capacity, certifications and performance.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fleet Emission Monitoring</h3>
+        <p>Monitor real-time emissions and fuel consumption to manage carbon footprint and optimise sustainability.</p>
       </div>
     </div>
   </main>

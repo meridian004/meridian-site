@@ -4,8 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insights – Meridian Strategic Resources</title>
-  <meta name="description" content="Read Meridian Strategic Resources' latest thought leadership on procurement strategy, infrastructure resilience and ESG compliance.">
+  <meta name="description" content="Thought leadership and case studies from Meridian Strategic Resources on procurement strategy, infrastructure resilience and environmental stewardship.">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Dropdown nav */
+    .navbar nav ul li { position: relative; }
+    .navbar nav ul li ul.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--color-secondary); padding: 0.5rem 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; list-style: none; min-width: 220px; z-index:200; }
+    .navbar nav ul li:hover > ul.dropdown-menu { display:block; }
+    .navbar nav ul li ul.dropdown-menu li { padding:0.5rem 1rem; }
+    .navbar nav ul li ul.dropdown-menu li a { color: var(--color-text); text-transform: none; font-size: 0.9rem; display:block; }
+    .navbar nav ul li ul.dropdown-menu li a:hover { color: var(--color-tertiary); }
+    /* Hero section for insights */
+    .page-hero {
+      background-image: linear-gradient(rgba(17,24,39,0.6), rgba(17,24,39,0.6)), url('business_meeting_2.png');
+      background-position: center;
+      background-size: cover;
+      color: var(--color-text);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 2.5rem; color: var(--color-accent); margin-bottom: 0.5rem; }
+    .page-hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    .insights-section { max-width: var(--max-width); margin: 0 auto; padding: 2rem 1rem; }
+    .insight-article { margin-bottom: 3rem; }
+    .insight-article h2 { color: var(--color-accent); margin-bottom: 0.5rem; }
+    .insight-article small { color: #9ca3af; display: block; margin-bottom: 0.5rem; }
+    .insight-article p { color: #d1d5db; line-height: 1.6; }
+  </style>
 </head>
 <body>
   <header>
@@ -18,50 +43,62 @@
       </div>
       <nav aria-label="Primary Navigation">
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="clients.html">Clients</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="services.html">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#smart-procurement">Smart Procurement Systems</a></li>
+              <li><a href="services.html#infrastructure-intelligence">Infrastructure Intelligence</a></li>
+              <li><a href="services.html#workforce-modeling">Workforce Modeling</a></li>
+              <li><a href="services.html#compliance-strategy">Compliance Strategy</a></li>
+              <li><a href="services.html#vendor-diversity">Vendor Diversity Enablement</a></li>
+              <li><a href="services.html#env-risk">Environmental Risk Dashboards</a></li>
+              <li><a href="services.html#policy-simulation">Policy Simulation &amp; Forecasting Tools</a></li>
+              <li><a href="services.html#regional-impact">Regional Impact Metrics</a></li>
+              <li><a href="services.html#ai-blockchain">AI &amp; Blockchain for Supply Chain Tracking</a></li>
+              <li><a href="services.html#green-bond">Green Bond &amp; Sustainable Investment Dashboards</a></li>
+            </ul>
+          </li>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
       <a class="btn-cta" href="contact.html">Get a Quote</a>
     </div>
   </header>
-
-  <!-- Page hero for Insights page -->
   <section class="page-hero">
-    <h1>Insights & Analysis</h1>
+    <h1>Insights &amp; Analysis</h1>
     <p>Dive into our thought leadership on procurement, infrastructure and ESG practices.</p>
   </section>
-
-  <main class="insights-preview" style="padding-top:2rem;">
-    <h2>Insights & Thought Leadership</h2>
-    <p style="text-align:center; max-width:800px; margin:0 auto 2rem;">Stay informed with our latest commentary on procurement strategy, infrastructure innovation and ESG compliance.  Each article provides actionable guidance and deep industry perspective.</p>
-
-    <div class="article-grid">
-      <div class="article-card">
-        <h3>The Future of Public Procurement: Navigating New Regulations</h3>
-        <small>Posted July 15 2025</small>
-        <p>With rapid regulatory changes across federal and state agencies, procurement teams must adapt quickly.  We break down the most recent policy shifts, explore their implications and provide best practices for staying compliant while achieving competitive advantage.</p>
-        <a href="#">Read more</a>
-      </div>
-      <div class="article-card">
-        <h3>Building Resilient Infrastructure in an ESG‑Driven World</h3>
-        <small>Posted June 30 2025</small>
-        <p>Resilience and sustainability go hand in hand.  Learn how to integrate ESG principles into infrastructure development, from material selection to supply chain logistics, and discover how to measure the impact of your projects beyond just the bottom line.</p>
-        <a href="#">Read more</a>
-      </div>
-      <div class="article-card">
-        <h3>Augmenting Your Workforce for Mission‑Critical Projects</h3>
-        <small>Posted June 12 2025</small>
-        <p>Discover strategies for bridging skill gaps and scaling your team quickly through workforce augmentation.  We outline the benefits of partnering with vetted professionals who bring niche expertise to your organisation, ensuring mission success without the overhead of permanent hires.</p>
-        <a href="#">Read more</a>
-      </div>
-    </div>
+  <main class="insights-section">
+    <!-- Article 1 -->
+    <article id="water-quality" class="insight-article">
+      <h2>San Bernardino Water Quality Monitoring Challenges</h2>
+      <small>Posted July 15 2025</small>
+      <p>Community‑based water quality monitoring programmes in San Bernardino County enrich data collection by involving citizen scientists. Volunteers partner with government agencies and non‑profits to collect frequent samples, enabling more granular insights and timely interventions【755555508065833†L213-L233】【755555508065833†L246-L253】. This approach also fosters stewardship and educates residents about local environmental issues.</p>
+    </article>
+    <!-- Article 2 -->
+    <article id="song-decommissioning" class="insight-article">
+      <h2>Decommissioning San Onofre: What’s Next for Southern CA?</h2>
+      <small>Posted July 10 2025</small>
+      <p>The decommissioning of the San Onofre Nuclear Generating Station (SONGS) poses safety and environmental challenges. Representative Mike Levin convened a task force of experts to oversee the process and advocated for legislation requiring resident inspectors and prioritising removal of spent fuel from high‑hazard sites【202776654887941†L96-L134】. These measures aim to enhance transparency and protect coastal communities during decommissioning.</p>
+    </article>
+    <!-- Article 3 -->
+    <article id="coastal-resilience" class="insight-article">
+      <h2>California Coastal Infrastructure Sustainability</h2>
+      <small>Posted June 30 2025</small>
+      <p>Up to three‑quarters of California’s beaches could disappear by 2100 due to sea‑level rise and stormier seas【276587042674510†L73-L110】. To address this, researchers from the University of California are developing the California Beach Resiliency Plan, which promotes nature‑based solutions like living shorelines and reef restoration. These projects aim to protect infrastructure while maintaining ecosystems.</p>
+    </article>
+    <!-- Article 4 -->
+    <article id="carb-update" class="insight-article">
+      <h2>CARB Low Carbon Fuel Standard Update</h2>
+      <small>Posted July 1 2025</small>
+      <p>The California Air Resources Board (CARB) approved amendments to its Low Carbon Fuel Standard that tighten carbon reduction requirements and encourage use of cleaner fuels【507551245440852†L69-L85】. The changes will take effect on July 1 2025, providing regulated entities time to prepare and innovate.</p>
+    </article>
   </main>
-
   <footer>
     <div class="footer-container">
       <div class="footer-section">
@@ -69,15 +106,15 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="clients.html">Clients</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="dispatch.html">Dispatch</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>Resources</h4>
         <ul>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="sitemap.xml">Sitemap</a></li>
         </ul>
       </div>
@@ -89,13 +126,19 @@
           <li><a href="tel:+19515551234">+1 (951) 555‑1234</a></li>
         </ul>
       </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p style="margin-top:0.5rem; font-size:0.8rem;">Get updates on California policy and AI in sustainability.</p>
+      </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Meridian Strategic Resources, LLC. All rights reserved.
-    </div>
+    <div class="footer-bottom">© 2025 Meridian Strategic Resources, LLC. All rights reserved.</div>
   </footer>
-
-  <!-- Back to top button -->
+  <script src="script.js" defer></script>
+  <script data-api="https://plausible.io/api/event" data-domain="meridianstrategic.io" src="https://plausible.io/js/plausible.js" defer></script>
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
