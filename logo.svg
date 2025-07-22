@@ -1,13 +1,38 @@
-<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="200"
+  height="200"
+  viewBox="0 0 200 200"
+  aria-labelledby="logoTitle logoDesc"
+  role="img">
+  <title id="logoTitle">Meridian Strategic Resources logo</title>
+  <desc id="logoDesc">A circular emblem with a stylised letter M. The circle and the letter use a gradient that shifts from emerald green to deep lapis blue, evoking a meridian line and conveying trust and growth.</desc>
+  <!-- Define gradients for the ring and the letter -->
   <defs>
-    <!-- Define a linear gradient for emerald to lapis -->
-    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#00A86B"/> <!-- Emerald green -->
-      <stop offset="100%" stop-color="#0067A2"/> <!-- Lapis blue -->
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1abc9c"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+    <linearGradient id="mGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1abc9c"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
     </linearGradient>
   </defs>
-  <!-- Outer ring -->
-  <circle cx="256" cy="256" r="240" stroke="url(#grad)" stroke-width="32" fill="none" />
-  <!-- Stylized M comprised of two arcs/lines -->
-  <path d="M128 352 L192 160 L256 320 L320 160 L384 352" stroke="url(#grad)" stroke-width="32" stroke-linecap="round" fill="none" />
+  <!-- Outer ring representing the meridian -->
+  <circle
+    cx="100" cy="100" r="90"
+    fill="none"
+    stroke="url(#ringGrad)"
+    stroke-width="10"
+    stroke-linejoin="round"
+    stroke-linecap="round" />
+  <!-- Stylised M formed by two vertical lines and a connecting middle line -->
+  <path
+    d="M60 140 L60 70 L90 120 L120 70 L120 140"
+    fill="none"
+    stroke="url(#mGrad)"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round" />
 </svg>

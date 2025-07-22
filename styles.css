@@ -548,3 +548,45 @@ input[type="checkbox"] + label {
   height: 50px;
     margin-top: 2px;
 }
+
+/*
+ * Dropdown navigation styles
+ *
+ * These rules ensure the Services submenu appears as a dropdown
+ * rather than inline with the primary navigation. Without these
+ * styles the nested <ul> inherits the flexbox layout from the
+ * parent navigation list and displays all service links across the
+ * header. Positioning each top level <li> relative and absolutely
+ * positioning the nested <ul> lets us toggle the submenu on hover.
+ */
+.navbar nav ul li {
+  position: relative;
+}
+.navbar nav ul li ul.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-secondary);
+  padding: 0.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  list-style: none;
+  min-width: 220px;
+  z-index: 200;
+}
+.navbar nav ul li:hover > ul.dropdown-menu {
+  display: block;
+}
+.navbar nav ul li ul.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+.navbar nav ul li ul.dropdown-menu li a {
+  color: var(--color-text);
+  text-transform: none;
+  font-size: 0.9rem;
+  display: block;
+}
+.navbar nav ul li ul.dropdown-menu li a:hover {
+  color: var(--color-tertiary);
+}
