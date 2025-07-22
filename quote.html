@@ -7,18 +7,51 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!--
+  The header on this page previously used a minimal navigation menu that was inconsistent
+  with the primary navigation found on the homepage. To ensure a unified experience
+  across the site, replace the old header and navigation markup with the same
+  responsive navbar used on index.html. This includes the logo image, a dropdown
+  services menu and a call‑to‑action button. The CTA still points back to the
+  contact page (this page) to maintain a consistent call to action across the site.
+-->
 <header>
-  <div class="logo"><a href="index.html">meridian strategic</a></div>
-  <nav>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="clients.html">Clients</a></li>
-      <li><a href="insights.html">Insights</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="navbar">
+    <div class="logo">
+      <a href="index.html" aria-label="Meridian Strategic Home">
+        <img src="assets/logo.svg" alt="Meridian Strategic logo" class="logo-img" >
+        <span>meridian strategic</span>
+      </a>
+    </div>
+    <nav aria-label="Primary Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#smart-procurement">Smart Procurement Systems</a></li>
+            <li><a href="services.html#infrastructure-intelligence">Infrastructure Intelligence</a></li>
+            <li><a href="services.html#workforce-modeling">Workforce Modeling</a></li>
+            <li><a href="services.html#compliance-strategy">Compliance Strategy</a></li>
+            <li><a href="services.html#vendor-diversity">Vendor Diversity Enablement</a></li>
+            <li><a href="services.html#env-risk">Environmental Risk Dashboards</a></li>
+            <li><a href="services.html#policy-simulation">Policy Simulation &amp; Forecasting Tools</a></li>
+            <li><a href="services.html#regional-impact">Regional Impact Metrics</a></li>
+            <li><a href="services.html#ai-blockchain">AI &amp; Blockchain for Supply Chain Tracking</a></li>
+            <li><a href="services.html#green-bond">Green Bond &amp; Sustainable Investment Dashboards</a></li>
+          </ul>
+        </li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="logistics.html">Logistics</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <a class="btn-cta" href="contact.html">Get a Quote</a>
+  </div>
 </header>
 
 <div class="content">

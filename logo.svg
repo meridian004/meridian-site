@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <!-- Define a linear gradient for emerald to lapis -->
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00A86B"/> <!-- Emerald green -->
+      <stop offset="100%" stop-color="#0067A2"/> <!-- Lapis blue -->
+    </linearGradient>
+  </defs>
+  <!-- Outer ring -->
+  <circle cx="256" cy="256" r="240" stroke="url(#grad)" stroke-width="32" fill="none" />
+  <!-- Stylized M comprised of two arcs/lines -->
+  <path d="M128 352 L192 160 L256 320 L320 160 L384 352" stroke="url(#grad)" stroke-width="32" stroke-linecap="round" fill="none" />
+</svg>
