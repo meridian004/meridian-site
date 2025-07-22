@@ -538,6 +538,7 @@ input[type="checkbox"] + label {
 /* Ensure the form panel grows appropriately */
 .contact-wrapper .contact-form-wrapper {
   margin: 0;
+   
 }
 
 
@@ -545,4 +546,5 @@ input[type="checkbox"] + label {
 .logo-img {
   width: 50px;
   height: 50px;
+    margin-top: 2px;
 }
