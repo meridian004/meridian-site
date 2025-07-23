@@ -11,7 +11,7 @@
    * To differentiate Meridian from other consulting firms yet retain a premium feel,
    * the base palette now uses a deep azure hue balanced by a vivid blue‑green
    * accent.  These colours were inspired by high‑end consultancy sites that mix
-   * dark blues with brighter highlights【728770113449942†L88-L94】.  Feel free to
+   * dark blues with brighter highlights.  Feel free to
    * tweak the values slightly, but keep strong contrast between backgrounds and
    * accents for accessibility.
    */
@@ -22,7 +22,7 @@
    * the accent brings energy and contrast. A golden tertiary colour
    * adds warmth for highlights and calls to action. Colours were
    * chosen based on research of top consulting brands which
-   * favour blues for trust and greens for growth【420559579878678†L119-L129】.
+   * favour blues for trust and greens for growth.
    */
   --color-base: #012D4A; /* deep ocean blue */
   --color-accent: #1ABC9C; /* fresh teal */
@@ -322,10 +322,29 @@ nav a {
   margin-bottom: 2rem;
   font-size: 2rem;
 }
+/* Article grid used on the home page (Latest Insights preview) */
 .article-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+}
+
+/* Three cards per row on desktop */
+@media (min-width: 901px) {
+  .article-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Two cards per row on tablets */
+@media (min-width: 600px) and (max-width: 900px) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* One card per row on mobile */
+@media (max-width: 599px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .article-card {
   background-color: var(--color-secondary);
@@ -374,7 +393,8 @@ footer {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* Use auto-fit with a larger minimum width so columns wrap more naturally and space evenly */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
 }
 .footer-section h4 {
@@ -397,6 +417,20 @@ footer {
   padding-top: 1rem;
 }
 
+/* Responsive layout for footer columns */
+@media (max-width: 1024px) {
+  .footer-container {
+    /* Two columns on tablets */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .footer-container {
+    /* Stack columns on mobile */
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-content {
@@ -407,17 +441,22 @@ footer {
     font-size: 2.5rem;
   }
   .service-grid,
-  .testimonial-grid,
-  .article-grid {
+  .testimonial-grid {
+    /* Allow service and testimonial grids to auto‑fill on smaller screens */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+  /*
+   * Do not modify .article-grid here; its layout is controlled by dedicated
+   * media queries above to ensure 3/2/1 columns. Removing it from this block
+   * prevents overriding those settings on smaller screens.
+   */
 }
 
 /* ------------------------------------------------------------------------- */
 /* Form and contact page styling                                             */
 /*
  * Many industry leaders provide light backgrounds for form areas to improve
- * readability and reduce friction on conversion pages【642147179642116†L35-L82】.  The
+ * readability and reduce friction on conversion pages.  The
  * following styles create a card‑like container for the contact form and
  * refine inputs to feel more polished and accessible.
  */
